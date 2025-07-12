@@ -1,0 +1,107 @@
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d4f3c 50%, #000000 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Sports-themed animations */
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(45deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Soccer ball pattern for backgrounds */
+.soccer-pattern {
+  background-image: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+}
+
+/* Horse racing track pattern */
+.track-pattern {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    rgba(16, 185, 129, 0.05) 10px,
+    rgba(16, 185, 129, 0.05) 20px
+  );
+}
+
+/* Custom button hover effects */
+.btn-sports {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-sports::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-sports:hover::before {
+  left: 100%;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation delays for staggered effects */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
